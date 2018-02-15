@@ -23,6 +23,6 @@ clf.fit(X_train, Y_train)
 Y_pred = clf.predict(X_test)
 
 dft = pd.read_csv("test.csv")
-dft['WINNER'] = np.DataFrame(Y_pred)
+dft['WINNER'] = pd.DataFrame(Y_pred)
 dft.to_csv("results.csv")
 
